@@ -29,7 +29,7 @@ This directory is designed to analyze the correspondence between the datasets us
 
 ### **Test 2: Collection Info vs. LoGo Datasets**
 
-* Determine the presence of LoGo datasets based on the Flan v2 metadata file, `flan_collection_info.csv`.
+* Determine the presence of LoGo datasets based on the Flan v2 metadata file, `flan/v2/flan_collection_info.csv`.
 
 ### **Test 3: Deep Discrepancy Analysis**
 
@@ -41,10 +41,10 @@ This directory is designed to analyze the correspondence between the datasets us
 
 To ensure the `import flan` statement works correctly within the Python environment, the following structural adjustments were made:
 
-1. **Original Structure**: `Flan/flan/v2/...`
+1. **Original Structure**: `./Flan/flan/v2/...`
 2. **Modified Structure**:
-* The nested `flan/` subdirectory was moved to the root level as `dataset/flan/`.
-* The original top-level directory was renamed to `dataset/flan_original/` for archival purposes.
+* `./Flan/flan/` -> `./flan/`
+* `./Flan/` -> `./flan_original/`
 
 
 3. **Result**: By configuring the `sys.path`, the environment can successfully execute `import flan.v2` to access `SeqIO` Task and Mixture definitions.
