@@ -1,19 +1,18 @@
 # LoGo Dataset Analysis with Flan v2
 
-This directory is designed to analyze the correspondence between the datasets used in the **LoGo (LoRA on the Go)** paper and the **Google Flan v2 (Flan 2022) collection**, specifically focusing on validating task matching through `SeqIO`.
+This directory is designed to analyze the correspondence between the datasets used in the **LoGo (LoRA on the Go)** paper and the **Google Flan v2 (Flan 2022) collection**
 
 ## 📁 Directory Structure
 
 ```text
 .
 ├── dataset_list.txt         # List of datasets addressed in the LoGo paper
-├── dataset/
-│   ├── data/                # Directory for path adjustment to import the flan library
-│   ├── flan/                # Active flan package (restructured from the original Flan/flan/...)
-│   ├── flan_original/       # Original flan repository structure prior to modification
-│   ├── test_1/              # Test 1: Script to contrast LoGo datasets with flan/v2/tasks
-│   ├── test_2/              # Test 2: Script to contrast LoGo datasets with flan_collection_info.csv
-│   └── test_3/              # Test 3: Analysis of datasets matched at test_2 but inconsistent with flan/v2/tasks
+├── flan/                    # Active flan package (restructured from the original Flan/flan/...)
+├── flan_original/           # Original flan repository structure prior to modification
+├── data/                    # Directory for path adjustment to import the flan library
+├── test_1                   # Test 1: Script to contrast LoGo datasets with flan/v2/tasks
+├── test_2                   # Test 2: Script to contrast LoGo datasets with flan_collection_info.csv
+├── test_3                   # Test 3: Analysis of datasets matched at test_2 but inconsistent with flan/v2/tasks
 ├── matching_result_1        # Output result from Test 1
 ├── matching_result_2        # Output result from Test 2
 └── matching_result_3        # Output result from Test 3
@@ -26,18 +25,15 @@ This directory is designed to analyze the correspondence between the datasets us
 
 ### **Test 1: Tasks vs. LoGo Datasets**
 
-* **Objective**: Verify if the datasets specified in the LoGo paper match the `SeqIO` Tasks defined in `flan/v2/tasks.py`.
-* **Details**: Analyzes the mapping between the official `SeqIO` Task Names and the dataset nomenclature used in the paper.
+* Verify if the datasets specified in the LoGo paper match the `SeqIO` Tasks defined in `flan/v2/tasks.py`.
 
 ### **Test 2: Collection Info vs. LoGo Datasets**
 
-* **Objective**: Determine the presence of LoGo datasets based on the Flan v2 metadata file, `flan_collection_info.csv`.
-* **Details**: Conducts a statistical comparison between the "Source Dataset" field in the CSV and the entries in `dataset_list.txt`.
+* Determine the presence of LoGo datasets based on the Flan v2 metadata file, `flan_collection_info.csv`.
 
 ### **Test 3: Deep Discrepancy Analysis**
 
-* **Objective**: Investigate exception cases where a dataset is matched in `test_2` (metadata level) but differs in its actual implementation or application within `flan/v2/tasks`.
-* **Details**: Extracts and describes datasets that exist in the metadata but have task definitions (prompts, options, or shot-settings) that deviate from the LoGo paper's methodology.
+* Investigate exception cases where a dataset is matched in `test_2` (metadata level) but differs in its actual implementation or application within `flan/v2/tasks`.
 
 ---
 
