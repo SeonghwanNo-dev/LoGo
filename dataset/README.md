@@ -4,6 +4,8 @@
 
 This directory is designed to analyze the correspondence between the datasets used in the **LoGo (LoRA on the Go)** paper and the **Google Flan v2 (Flan 2022) collection**
 
+---
+
 ## Background & Initial Attempts
 Initially, we attempted to extract the datasets directly using the seqIO and flan libraries to match the data used in the paper. We conducted multiple comparison tests (Test 1, 2, and 3), but despite these efforts, we were unable to establish a consistent match between the extracted data and the paper's specifications.
 
@@ -16,7 +18,9 @@ The verified source for the datasets used in the paper is:
 - Hugging Face Repository: https://huggingface.co/datasets/lorahub/flanv2
 
 ## Current Status
+
 The implementation for downloading and processing these datasets based on the verified source is located in the root/dataset_2 directory.
+
 --- 
 ## 📁 Directory Structure
 
